@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myawesome-app
+spec:
+  containers:
+  - image: k8s.gcr.io/test-webserver
+    name: test-container
+    resources: {}
+    env:
+     - name: SITE_HOST_NAME
+       valueFrom:
+         configMapKeyRef:
+           name: my-app-config
+           key: host_name
+    envFrom:
+      - secretRef:
+          name: mysecret
+    volumeMounts:
+    - mountPath: /var/log-volume
+      name: log-vol2
+  volumes:
+  - name: log-vol2
+    hostPath:
+       path: /var/logger
+       type: DirectoryOrCreate
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

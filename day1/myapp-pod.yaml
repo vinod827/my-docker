@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    team: aws
+    company: simpplr
+  name: myapp
+spec:
+  containers:
+  - image: vinod827/myapp:1.0.1
+    name: myapp
+    resources: {}
+  imagePullSecrets:
+  - name: mydocker-registry
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
