@@ -1,4 +1,4 @@
-# my-docker
+# Welcome to my-docker basic app
 
 # Google Cloud Platform (GCP)
 
@@ -135,13 +135,4 @@ kubectl create configmap my-app-config --from-literal=key1=config1 --from-litera
 
 To create a secret:-
 kubectl create secret generic mysecret --from-literal=key1=config1 --from-literal=key2=config2
-
-
-
-
-
-
-
-
-
 
