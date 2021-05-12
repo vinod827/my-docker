@@ -8,6 +8,7 @@ COPY . .
 LABEL maintainer="Vinod Kumar Nair <vinod827@gmail.com>" \
       version="1.0.0"
 
+
 #Running as non-root user
 RUN addgroup -S developers && adduser -S appuser -G developers -h /home/appuser
 USER appuser 
