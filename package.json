@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "test": "mocha",
-    "test-with-coverage": "nyc --reporter=text mocha"
+    "test-with-coverage": "nyc --reporter=lcov --reporter=text-lcov --all -x \"./node_modules/*\" -x \"./coverage/*\" npm run test"
   },
   "author": "Vinod Kumar Nair",
   "license": "ISC",
