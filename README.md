@@ -2,6 +2,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/daaac45760f243909d499bf63769be65)](https://app.codacy.com/gh/vinod827/my-docker?utm_source=github.com&utm_medium=referral&utm_content=vinod827/my-docker&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/daaac45760f243909d499bf63769be65)](https://app.codacy.com/gh/vinod827/my-docker?utm_source=github.com&utm_medium=referral&utm_content=vinod827/my-docker&utm_campaign=Badge_Grade_Settings)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/daaac45760f243909d499bf63769be65)](https://app.codacy.com/gh/vinod827/my-docker?utm_source=github.com&utm_medium=referral&utm_content=vinod827/my-docker&utm_campaign=Badge_Grade_Settings)
 
 # Google Cloud Platform (GCP)
 
