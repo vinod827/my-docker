@@ -126,10 +126,6 @@ To work with Kubernetes context:-
 kubectl config get-contexts
 kubectl config current-context
 
-To change a context:-
-kubectl config use-context <context name>
-For e.g. - kubectl config use-context vinod.kumar@simpplr.com@my-cluster-demo.us-east-1.eksctl.io
-
 To check current namespace:-
 kubectl config view --minify | grep namespace:
 
