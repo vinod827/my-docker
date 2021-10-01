@@ -1,50 +1,19 @@
 pipeline {
-    agent none
     agent {
         docker {
             image 'vinod827/jenkins-build-agent:1.0.0' //based on AmazonAMI 2.0
-        //args '-v ${HOME}/new/dev/.aws:/.aws:ro -e XDG_CACHE_HOME=/tmp/go/.cache'
+            args '-v $HOME/.m2:/root/.m2'
+            //args '-v ${HOME}/new/dev/.aws:/.aws:ro -e XDG_CACHE_HOME=/tmp/go/.cache'
         }
-    }        
-
+    }
     stages {
-        // All stages starts here
-
-        //For backend apps
-        stage('Back-end') {
-          steps { 
-                sh 'java -version'
-                sh 'javac -version'
+        stage('Build') {
+            steps {
+                sh 'mvn -B'
                 sh 'mvn --version'
-          }
-        }
-
-        stage('Unit Test') {
-          steps {
-            // some test cases which are using rewire to test private properties
-            // require build
-            sh 'echo "unit test"'
-          }
-        }
-
-        stage('SonarQube') {
-          steps {
-            script {
-              sh 'echo "make coverage"'
-              sh 'echo "Pushed sonar report"'
+                sh 'javac -version'
+                sh 'java -version'
             }
-          }
         }
-
-        stage('OSS/Whitesource') {
-          steps {
-            script {
-              sh 'echo "make oss"'
-            }
-          }
-        }
-
-      // All stages ends here
-
     }
 }
