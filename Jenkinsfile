@@ -7,6 +7,7 @@ pipeline {
         }
     }
     stages {
+        // All stages starts here
         stage('Build') {
             steps {
                 //sh 'mvn clean install test verify'
@@ -15,5 +16,26 @@ pipeline {
                 sh 'java -version'
             }
         }
+        stage('Unit Test') {
+          steps {
+            sh 'echo "unit test"'
+          }
+        }
+        stage('Codacy') {
+          steps {
+            script {
+              sh 'echo "make coverage"'
+              sh 'echo "Pushed report to Codacy"'
+            }
+          }
+        }
+        stage('OSS/Whitesource') {
+          steps {
+            script {
+              sh 'echo "make oss"'
+            }
+          }
+        }
+      // All stages ends here
     }
 }
