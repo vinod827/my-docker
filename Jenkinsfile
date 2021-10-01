@@ -12,8 +12,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'java --version'
-                sh 'javac --version'
+                sh 'java -version'
+                sh 'javac -version'
                 sh 'mvn --version'
             }
         }
