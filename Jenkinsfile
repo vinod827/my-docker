@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B'
+                //sh 'mvn clean install test verify'
                 sh 'mvn --version'
                 sh 'javac -version'
                 sh 'java -version'
