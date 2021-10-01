@@ -17,16 +17,6 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-        // For frontend apps
-        stage('Front-end') {
-            agent {
-                docker { image 'node:14-alpine' }
-            }
-            steps {
-                sh 'node --version'
-            }
-        }
-
 
         stage('Unit Test') {
           steps {
