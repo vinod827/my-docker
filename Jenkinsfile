@@ -38,4 +38,41 @@ pipeline {
         }
       // All stages ends here
     }
+    
+   post {
+        //Post action starts here
+    aborted {
+      echo "BUILD WAS ABORTED"
+    }
+
+    always {
+      echo "BUILD FINISHED"
+    }
+
+    changed {
+      echo "BUILD HAVE CHANGED"
+    }
+
+    cleanup {
+      echo "CLEANING UP BUILD"
+    }
+
+    failure {
+      echo "BUILD FAILED"
+    }
+
+    success {
+      echo "BUILD IS SUCCESSFULL"
+    }
+
+    unstable {
+      echo "BUILD IS UNSTABLE"
+    }
+
+    unsuccessful {
+      echo "BUILD IS UNSUCCESSFUL"
+    }
+        //Post action ends here
+  }
+    
 }
